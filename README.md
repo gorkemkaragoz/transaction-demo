@@ -29,8 +29,4 @@ mvn spring-boot:run
 | 9 | REQUIRES_NEW (Payment) | `POST /api/orders/place-with-payment-new-tx` | Independent TX — commits separately |
 | 10 | Cancel Order | `PUT /api/orders/{id}/cancel` | Atomic cancel + stock restore |
 
-## Testing
-
-Import `transaction-demo.postman_collection.json` into Postman. Run demos sequentially (1→10) and check H2 Console after each request to verify database state.
-
 Console shows full transaction lifecycle (create, join, suspend, commit, rollback) via TRACE level logging.
